@@ -1,0 +1,16 @@
+
+{
+  "name": "react-native-audio-exoplayer",
+  "version": "1.0.0",
+  "description": "React Native module for playing sound clips on Android using Google ExoPlayer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Pavlo Kyrylenko <kirilenko.pavlo@gmail.com> (https://github.com/kyrylenko)",
+  "license": "MIT"
+ 
+}
