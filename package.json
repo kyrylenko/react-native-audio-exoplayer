@@ -8,9 +8,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "react-component",
+    "sound",
+    "audio"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyrylenko/react-native-audio-exoplayer.git"
+  },
   "author": "Pavlo Kyrylenko <kirilenko.pavlo@gmail.com> (https://github.com/kyrylenko)",
   "license": "MIT"
- 
 }
