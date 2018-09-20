@@ -68,17 +68,16 @@ A static convenience method to construct and load a sound is also provided:
 ```javascript
 Sound.create(source, initialStatus = {}, onPlaybackStatusUpdate = null)
 ```
-Creates and loads a sound from source, with optional initialStatus, onPlaybackStatusUpdate, and downloadFirst.
+Creates and loads a sound from source, with optional `initialStatus`, and `onPlaybackStatusUpdate`.
 
 ### Parameters
-1. `source (object / number / Asset)` -- The source of the sound. The following forms are supported:
+1. `source (object / asset)` -- The source of the sound. The following forms are supported:
 	- A dictionary of the form `{ uri: 'http://path/to/file' }` with a network URL pointing to an audio file on the web.
 	- `require('path/to/file')` for an audio file asset in the source code directory.
 
-2. `initialStatus (PlaybackStatusToSet)` -- The initial intended `PlaybackStatusToSet` of the sound, whose values will override the default initial playback status. This value defaults to `{}` if no parameter is passed. See below for details on `PlaybackStatusToSet` and the default initial playback status..
+2. `initialStatus (PlaybackStatusToSet)` -- The initial intended `PlaybackStatusToSet` of the sound, whose values will override the default initial playback status. This value defaults to `{}` if no parameter is passed. See below for details on `PlaybackStatusToSet` and the default initial playback status.
 
-3. `onPlaybackStatusUpdate (function)` -- A function taking a single parameter PlaybackStatus. This value defaults to null if no parameter is passed. See the documentation below for details on the functionality provided by onPlaybackStatusUpdate
-
+3. `onPlaybackStatusUpdate (function)` -- A function taking a single parameter PlaybackStatus. This value defaults to null if no parameter is passed. See the documentation below for details on the functionality provided by onPlaybackStatusUpdate. 
 ### Returns
 A `Promise` that is rejected if creation failed, or fulfilled with the following dictionary if creation succeeded:  
 `sound` : the newly created and loaded Sound object.  
@@ -87,6 +86,11 @@ A `Promise` that is rejected if creation failed, or fulfilled with the following
 ## Playback API:  
 - `soundObject.loadAsync(source, initialStatus = {})`  
 Loads the media from source into memory and prepares it for playing. This must be called before calling `setStatusAsync()` or any of the convenience set status methods. This method can only be called if the `soundObject` is in an unloaded state.  
+### Parameters
+(The same as for static `Sound.create(source, initialStatus = {}, onPlaybackStatusUpdate = null)`, see the description above)  
+### Returns
+(The same as for static `Sound.create(source, initialStatus = {}, onPlaybackStatusUpdate = null)`, see the description above)  
+
 - `soundObject.unloadAsync()`  
 Unloads the media from memory. `loadAsync()` must be called again in order to be able to play the media.  
 ### Returns
