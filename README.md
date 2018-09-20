@@ -20,13 +20,11 @@ You should be using react-native-audio-exoplayer:
 1. Open up `android/app/src/main/java/[...]/MainApplication.java`
 	
 	On top, where imports are:
-
 	```java
-	import com.brentvatne.react.ReactExoplayerPackage;
+	import com.reactlibrary.ReactExoplayerPackage;
 	```
 
 	Add the `ReactExoplayerPackage` class to your list of exported packages.
-
 	```java
 	@Override
 	protected List<ReactPackage> getPackages() {
