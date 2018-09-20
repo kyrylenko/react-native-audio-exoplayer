@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-audio-exoplayer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native module for playing sound clips on Android using Google ExoPlayer",
   "main": "index.js",
   "scripts": {
