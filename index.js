@@ -171,6 +171,19 @@ class Sound {
     }
   };
 
+  async unloadAsync() {
+    if (this._loaded) {
+      this._loaded = false;
+      const key = this._key;
+      this._key = -1;
+      const status = await NativeModules.ExponentAV.unloadForSound(key);
+      this._callOnPlaybackStatusUpdateForNewStatus(status);
+      return status;
+    } else {
+      return this.getStatusAsync(); // Automatically calls onPlaybackStatusUpdate.
+    }
+  }
+
   //API methods
   async setStatusAsync(status) {
     //      console.error('Requested position after replay has to be 0.');
